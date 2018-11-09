@@ -1,0 +1,113 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+  background: url(https://www.wibc.com/sites/g/files/exi441/f/styles/large_730/public/article-images-featured/basketball_thomasnorthcut_thinkstock_0.jpg?itok=DseAmmen); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: cover;
+  font-family: 'sans-serif';
+  color: white;
+}
+
+.form-questions, .title-page, #results{
+  max-width: 700px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+.title-page {
+  font-weight: 100;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+}
+
+.answeroption {
+    display: block;
+    cursor: pointer;
+    padding-bottom: 20px;
+    font-size: 18px;
+    padding-right: 20px;
+    text-align: left;
+};
+
+
+#answer{
+    width:300px;
+    height:300px;
+    background-color:#ddd;
+    opacity:0;
+    transition:all .5s,
+  }
+  
+  #answer.show{
+    opacity:1;
+    
+  }
+
+  #results {
+    background-color:rgb(189, 36, 36);
+    opacity:0;
+    transition:all .5s,
+  }
+
+  #results.show {
+    opacity: 1;
+  }
+
+  /*============ Buttons ===============*/
+
+  #start-Button, #tryagain,#submit-button,.next-button{
+    padding: 20px;
+     border: none;
+     background-color: rgb(202, 93, 30);
+     color: white;
+     font-size: 22px;
+     text-transform: capitalize;
+     border-radius: 0;
+     cursor: pointer;
+     margin-top: 10px;
+     width: 50%;
+     text-align: center;
+     opacity: 0.8;
+ }
+
+
+
+ #start-button:hover,
+ #tryagain:hover{
+   background-color: #3e8e41}
+
+
+
+   @media (max-width: 765px){
+      .form-questions,.title-page, #results{
+        width: 100%;
+        font-size: 1.2rem;
+      }
+
+      .quiz-question, .answeroption{
+        font-size: 1.5rem;
+      }
+
+      .next-button, #submit-button{
+        font-size: 2rem;
+        /* color: white; */
+    }
+      
+   }
+
+   @media (max-width: 455px) {
+     #submit-button, .next-button{
+       font-size: 1rem;
+     }
+   }
