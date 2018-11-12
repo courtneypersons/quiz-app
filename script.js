@@ -18,29 +18,23 @@ function startQuiz() {
 
 
 function showQuestion(){
+  let answer = ""
+  for (let i = 0; i < quizQuestions[counter].answers.length; i++){
+    answer+=  `<label class="answerOption">
+    <input type="radio" value="${quizQuestions[counter].answers[i]}" name="answer" required>
+    <span>${quizQuestions[counter].answers[i]}</span>
+    </label>`
+  }
+
   $(".form-questions").html(`
     <fieldset>
       <legend class="question-num">question ${questionNum} out of ${quizQuestions.length}</legend>
-    <div class="quiz-question">
+    <section class="quiz-question" role="region">
         ${quizQuestions[counter].question}
-    </div>
-
-      <label class="answerOption">
-      <input type="radio" value="${quizQuestions[counter].answers[0]}" name="answer" required>
-      <span>${quizQuestions[counter].answers[0]}</span>
-      </label>
-      <label class="answerOption">
-      <input type="radio" value="${quizQuestions[counter].answers[1]}" name="answer" required>
-      <span>${quizQuestions[counter].answers[1]}</span>
-      </label>
-      <label class="answerOption">
-      <input type="radio" value="${quizQuestions[counter].answers[2]}" name="answer" required>
-      <span>${quizQuestions[counter].answers[2]}</span>
-      </label>
-      <label class="answerOption">
-      <input type="radio" value="${quizQuestions[counter].answers[3]}" name="answer" required>
-      <span>${quizQuestions[counter].answers[3]}</span>
-      </label>
+    </section>
+  
+    ${answer}
+     
     <input type="submit" name="submit" id="submit-button" value="check answer">
    </fieldset>   
   <div class="score">
@@ -76,7 +70,7 @@ function userSelectAnswer () {
 //  when counter reach the last question , show the results 
 
 function isGameOver(){
-console.log(counter, quizQuestions.length)
+(counter, quizQuestions.length)
   if (counter === quizQuestions.length){
 
     $("#results").addClass("show")

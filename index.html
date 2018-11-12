@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,24 +9,24 @@
 </head>
 <body>
     <main role="main" aria-live="assertive">
-        <div class="title-page">
+        <section class="title-page" role="region">
             <h1>so you think your an NBA Guru?</h1>
             <h2>click begin quiz to find out</h2>
             <button value="start" type="start" id="start-button">Begin Quiz</button>
-        </div>
+        </section>
     
-<form class="form-questions" role="main" aria-live="assertive">
-   
-</form>
+        <form class="form-questions" role="main" aria-live="assertive">
+        
+        </form>
 
-<div id="results">
-<p>gameover!</p>
-<span></span>
-<button id="tryagain">try again</button>
+        <section id="results" aria-live="polite" role="region">
+            <p>gameover!</p>
+            <span></span>
+            <button id="tryagain">try again</button>
 
-</div>    
+        </section>    
    
-</main>
+    </main>
              
  </body>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
